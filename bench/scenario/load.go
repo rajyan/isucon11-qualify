@@ -120,7 +120,7 @@ func (s *Scenario) Load(parent context.Context, step *isucandar.BenchmarkStep) e
 	}()
 
 	select {
-	case <-time.After(100 * time.Millisecond):
+	case <-time.After(1000 * time.Millisecond):
 		// 1秒だけ待ったら抜ける
 		logger.AdminLogger.Println("WARNING!!: Force ending loadWaitGroup")
 	case <-loadWaitCh:
