@@ -1,4 +1,4 @@
-module github.com/isucon/isucon11-qualify/bench
+module github.com/rajyan/isucon11-qualify/bench
 
 go 1.16
 
@@ -9,6 +9,7 @@ require (
 	github.com/google/uuid v1.3.0
 	github.com/isucon/isucandar v0.0.0-20210821075549-ee64d0785035
 	github.com/isucon/isucon10-portal v0.0.0-20201008112716-8c0b637e1bd8
+	github.com/isucon/isucon11-qualify/bench v0.0.0-20210827080238-94cd73177f61
 	github.com/isucon/isucon11-qualify/bench/random v0.0.0-00010101000000-000000000000
 	github.com/labstack/echo/v4 v4.5.0
 	github.com/mattn/go-isatty v0.0.13 // indirect

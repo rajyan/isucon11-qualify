@@ -1,6 +1,6 @@
 COMMIT=$(shell cat /etc/REVISION 2>/dev/null || git rev-parse --short HEAD)
 
-GOPRIVATE="github.com/isucon"
+GOPRIVATE="github.com/rajyan"
 GOLDFLAGS=-X main.COMMIT=$(COMMIT)
 # race detector
 GO_BUILD_RACE:=-race
@@ -38,7 +38,7 @@ vendor: $(GOPROTOFILES)
 	GOPRIVATE=$(GOPRIVATE) go mod vendor
 
 $(EXE): Makefile go.mod $(GOFILES) $(ASSETS)
-	GOOS=$(GOOS) GOPRIVATE=$(GOPRIVATE) $(GO_BUILD) -ldflags "$(GOLDFLAGS)" -o $(EXE) -v github.com/isucon/isucon11-qualify/bench
+	GOOS=$(GOOS) GOPRIVATE=$(GOPRIVATE) $(GO_BUILD) -ldflags "$(GOLDFLAGS)" -o $(EXE) -v github.com/rajyan/isucon11-qualify/bench
 
 .PHONY: $(ASSETS)
 $(ASSETS): $(PUBLIC_FILES)
